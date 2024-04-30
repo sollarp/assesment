@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">savetext</string>
+    <string name="enter_text_here">Enter text here...</string>
+    <string name="button">Button</string>
+    <string name="OK">OK</string>
+    <string name="element_text">string</string>
+    <string name="time_and_text_format">[%1$s]  %2$s</string>
+</resources>
