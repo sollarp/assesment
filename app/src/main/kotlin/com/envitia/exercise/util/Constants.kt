@@ -1,4 +1,4 @@
-package com.envitia.exercise
+package com.envitia.exercise.util
 
 object Constants {
     const val TEXT_FILE_NAME = "savedTextFile.txt"
