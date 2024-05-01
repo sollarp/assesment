@@ -1,5 +1,6 @@
 [versions]
 agp = "8.3.1"
+espressoCoreVersion = "3.4.0"
 gson = "2.10.1"
 kotlin = "1.9.0"
 coreKtx = "1.13.0"
@@ -11,10 +12,13 @@ material = "1.10.0"
 activity = "1.8.0"
 constraintlayout = "2.1.4"
 recyclerview = "1.3.2"
+runner = "1.5.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-espresso-core-v340 = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCoreVersion" }
 androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+androidx-runner = { module = "androidx.test:runner", version.ref = "runner" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }

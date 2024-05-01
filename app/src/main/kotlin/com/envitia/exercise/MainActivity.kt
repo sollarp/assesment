@@ -1,16 +1,13 @@
 package com.envitia.exercise
 
-import android.content.Context
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.envitia.exercise.util.Constants.TEXT_EMPTY
-import com.envitia.exercise.util.Constants.TEXT_FILE_NAME
 import com.envitia.exercise.databinding.ActivityMainBinding
+import com.envitia.exercise.util.Constants.TEXT_EMPTY
 import com.envitia.exercise.util.TextProcessingUtils
-import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         val text = binding.myTextField.text.toString()
         if (text.isNotBlank()) {
             mainViewModel.addUserText(text)
-           TextProcessingUtils.saveToFile(text, this)
+            TextProcessingUtils.saveToFile(text, this)
             binding.myTextField.text.clear()
         } else {
             Toast.makeText(this, TEXT_EMPTY, Toast.LENGTH_SHORT).show()
