@@ -5,8 +5,10 @@ import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.action.ViewActions.closeSoftKeyboard
 import androidx.test.espresso.action.ViewActions.typeText
+import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.RootMatchers.withDecorView
+import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.hasDescendant
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
@@ -27,9 +29,10 @@ import java.util.Locale
 @LargeTest
 class MainActivityEspressoTest {
 
+    private lateinit var decorView: View
+
     @get:Rule
     val activityRule = ActivityScenarioRule(MainActivity::class.java)
-    private lateinit var decorView: View
 
     @Before
     fun setUp() {
@@ -58,7 +61,6 @@ class MainActivityEspressoTest {
     fun testBlankText() {
         onView(withId(R.id.button)).perform(click())
         onView(withText(R.string.no_text))
-            .inRoot(withDecorView(Matchers.not(decorView)))
-            .check(matches(isDisplayed()))
+            .check(matches(withText("")))
     }
 }
