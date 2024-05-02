@@ -28,17 +28,9 @@ import java.util.Locale
 @LargeTest
 class MainActivityEspressoTest {
 
-    private lateinit var decorView: View
 
     @get:Rule
     val activityRule = ActivityScenarioRule(MainActivity::class.java)
-
-    @Before
-    fun setUp() {
-        activityRule.scenario.onActivity { activity ->
-            decorView = activity.window.decorView
-        }
-    }
 
     @Test
     fun testAddingTextToList() {
