@@ -3,12 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable
-            name="mainViewModel"
-            type="com.envitia.exercise.MainViewModel" />
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
@@ -18,31 +12,33 @@
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_height="0dp"
             android:layout_marginEnd="26dp"
             android:background="@android:color/white"
             android:text="@string/OK"
             android:theme="@style/CardView.Light"
             app:cornerRadius="0dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toTopOf="@id/my_text_field"
+            app:layout_constraintStart_toEndOf="@id/my_text_field"
+            app:layout_constraintBottom_toBottomOf="@id/my_text_field"
+            app:layout_constraintHorizontal_weight="0.2"/>
 
         <EditText
             android:id="@+id/my_text_field"
             android:layout_width="0dp"
             android:layout_height="43dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="26dp"
             android:background="#87B3E3"
             android:hint="@string/enter_text_here"
             android:inputType="text"
             android:textColor="@color/white"
             app:layout_constraintEnd_toStartOf="@+id/button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_weight="0.8"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
