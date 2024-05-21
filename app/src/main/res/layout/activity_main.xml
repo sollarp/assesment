@@ -31,6 +31,7 @@
             android:layout_marginStart="26dp"
             android:layout_marginTop="44dp"
             android:layout_marginEnd="26dp"
+            android:autofillHints="text here"
             android:background="#87B3E3"
             android:hint="@string/enter_text_here"
             android:inputType="text"
@@ -40,7 +41,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintHorizontal_weight="0.8"/>
 
-        <androidx.recyclerview.widget.RecyclerView
+        <!--<androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -51,6 +52,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button"
-            tools:listitem="@layout/list_element" />
+            tools:listitem="@layout/list_element" />-->
+
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
